@@ -1,0 +1,55 @@
+# * The base configuration for Strearm the open source CRM built on Streamlit
+#
+# * This file contains the following configurations:
+#
+# * Database settings
+# * Secret keys
+# * Database table prefix
+
+DB_CONFIG:
+ - DB_NAME: 'database_name_here'
+ - DB_USER: 'username_here'
+ - DB_PASSWORD: 'password_here'
+ - DB_HOST: 'localhost'
+ - DB_CHARSET: 'utf8'
+ - DB_COLLATE: ''
+ - DB_TABLE_PREFIX: 'srm_' # Strearm database table prefix.
+
+# *Strearm database table prefix.*
+
+# You can have multiple installations in one database if you give each
+# a unique prefix. Only numbers, letters, and underscores please!
+
+# Authentication unique keys and salts.
+#
+# Change these to different unique phrases! You can generate these using
+# the {@link https://api.wordpress.org/secret-key/1.1/salt/ WordPress.org secret-key service}.
+#
+# You can change these at any point in time to invalidate all existing cookies.
+# This will force all users to have to log in again.
+
+AUTH_CONFIG:
+ - AUTH_KEY: 'put your unique phrase here'
+ - SECURE_AUTH_KEY: 'put your unique phrase here'
+ - LOGGED_IN_KEY: 'put your unique phrase here'
+ - NONCE_KEY: 'put your unique phrase here'
+ - AUTH_SALT: 'put your unique phrase here'
+ - SECURE_AUTH_SALT: 'put your unique phrase here'
+ - LOGGED_IN_SALT: 'put your unique phrase here'
+ - NONCE_SALT: 'put your unique phrase here'
+
+
+# For developers: Strearm debugging mode.
+#
+# Change this to true to enable the display of notices during development.
+# It is strongly recommended that plugin and theme developers use WP_DEBUG
+# in their development environments.
+#
+# For information on other constants that can be used for debugging,
+# visit the documentation.
+
+### DEBUG_MODE: True
+
+# Add any custom values between this line and the "stop editing" line.
+
+# That's all, stop editing! Happy publishing.

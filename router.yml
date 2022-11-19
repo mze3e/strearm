@@ -1,0 +1,12 @@
+view_pages:
+  Home: home
+  Customers: customers
+  Products: products
+  Orders: orders
+  Login: login
+  Logout: logout
+
+views_root: views
+components_root: components
+public_root: public
+

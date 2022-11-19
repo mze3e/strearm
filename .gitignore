@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+#Streamlit Related
+.DS_Store
+
+#Strearm Related
+config.yml
