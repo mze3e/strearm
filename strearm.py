@@ -28,7 +28,8 @@ if os.path.isfile(CONFIG_FILE_PATH):
     with open(CONFIG_FILE_PATH, 'r') as stream:
         user_config_dict = yaml.safe_load(stream)
 else:
-    st.write('No user config file found')
+    #st.write('No user config file found')
+    pass
 
 if os.path.isfile(ROUTER_FILE_PATH):
     with open(ROUTER_FILE_PATH, 'r') as stream:
@@ -37,7 +38,7 @@ else:
     st.write('No router file found')
 
 st.session_state.view_pages_dict = router_dict['view_pages']
-st.session_state.view_pages_list = router_dict['view_pages'].keys()
+st.session_state.view_pages_list = list(router_dict['view_pages'].keys())
 st.session_state.views_root = router_dict['views_root']
 st.session_state.components_root = router_dict['components_root']
 st.session_state.public_root = router_dict['public_root']
