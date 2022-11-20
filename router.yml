@@ -3,10 +3,14 @@ view_pages:
   Customers: customers
   Products: products
   Orders: orders
-  Login: login
-  Logout: logout
+  
+  App: app
 
 views_root: views
 components_root: components
-public_root: public
+assets_root: public
+content_root: content
 
+settings_pages:
+  Login: login
+  Logout: logout
