@@ -1,2 +1,5 @@
 PyYAML
 streamlit
+streamlit-on-Hover-tabs
+json
+jinja2

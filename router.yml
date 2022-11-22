@@ -3,8 +3,14 @@ view_pages:
   Customers: customers
   Products: products
   Orders: orders
-  
   App: app
+
+#Lookup icon name from https://fonts.google.com/icons
+view_icons:
+  Home: home
+  Customers: account_circle
+  Products: inventory_2
+  Orders: list_alt
 
 views_root: views
 components_root: components
