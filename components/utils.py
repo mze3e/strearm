@@ -5,6 +5,11 @@ import os
 import streamlit as st
 from streamlit.components.v1 import html
 import json
+import jinja2
+import time
+
+#from streamlit_server_state import server, session_info
+from streamlit.runtime.scriptrunner.script_run_context import get_script_run_ctx
 
 def get_table_download_link(data_frame):
     """Generates a link allowing the data in a given panda dataframe to be downloaded
@@ -271,3 +276,27 @@ def trigger_navigation_event():
     st.experimental_set_query_params(
         page=st.session_state.view_pages_dict[st.session_state.nav_current_page]
     )
+
+def firebase_config():
+    # Load the template json file using jinja2
+    env = jinja2.Environment(loader=jinja2.FileSystemLoader('templates'))
+    template = env.get_template('firebase.json')
+
+    # Render the template with the project_id value
+    return json.loads(template.render(**st.secrets.firebase_credentials), strict=False)
+
+def streamlit_session():
+    # The container can host multiple sessions, so we must make sure to select the correct one!
+    session_id = get_script_run_ctx().session_id
+    session = session_info.get_this_session_info()
+    session_headers = session.client.request.headers._dict
+    # st.write(session_id)
+    # st.write(session_info.get_session_id())
+    # st.write(session_headers)
+    return session_id, session, session_headers
+
+def event_listener(event):
+    print("Received event: ", time.time())
+    print("event.event_type: ", event.event_type)  # can be 'put' or 'patch'
+    print("event.path: ", event.path)  # relative to the reference, it seems
+    print("event.data: ", event.data)  # new data at /reference/event.path. None if deleted

@@ -2,3 +2,11 @@ PyYAML
 streamlit
 streamlit-on-Hover-tabs
 jinja2
+google-cloud-firestore
+firebase_admin
+streamlit-server-state
+pyrebase
+streamlit-authenticator
+email_decomposer
+libgravatar
+PyCryptodome

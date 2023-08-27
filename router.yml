@@ -4,6 +4,9 @@ view_pages:
   Products: products
   Orders: orders
   App: app
+  Login: login
+  Logout: logout
+  OpenCV: opencv_app
 
 #Lookup icon name from https://fonts.google.com/icons
 view_icons:
@@ -11,6 +14,9 @@ view_icons:
   Customers: account_circle
   Products: inventory_2
   Orders: list_alt
+  Login: login
+  Logout: logout
+  OpenCV: camera
 
 views_root: views
 components_root: components
